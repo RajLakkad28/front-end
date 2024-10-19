@@ -1,0 +1,130 @@
+/* Wrapper to center the chatbot */
+.chat-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    width: 100vw; /* Full viewport width */
+    background-color: rgba(0, 0, 0, 0.1); /* Optional: background overlay */
+    position: fixed; /* Make sure the wrapper takes the entire viewport */
+    top: 0;
+    left: 0;
+}
+
+/* Chat container styling */
+.chat-container {
+    width: 400px;
+    max-height: 80vh; /* Maximum height to prevent overflow */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: slide-in 0.5s ease-out;
+}
+
+.chat-header {
+    background-color: #00d945;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+    background-image: url("https://www.transparenttextures.com/patterns/fresh-snow.png");
+}
+
+.chat-box {
+    display: flex;
+    flex-direction: column; /* Stack messages vertically */
+    align-items: flex-start; /* Align bot messages to the left */
+    padding: 15px;
+    flex-grow: 1; /* Allow the chat box to grow */
+    overflow-y: auto; /* Enable scrolling */
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa; /* Slightly darker background for chat box */
+    animation: fade-in 0.5s ease-in; /* Animation for chat box */
+}
+
+
+.chat-message {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: all 0.3s;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #ffe100; /* User message background */
+    margin-left: auto; /* Push the message box to the right */
+    padding: 10px 15px; /* Add padding for better spacing */
+    border-radius: 8px; /* Add rounded corners */
+    display: inline-block; /* Ensure the width adapts to the content */
+    max-width: 80%; /* Limit the width to 80% of the chat box */
+    word-wrap: break-word; /* Allow long words to break and wrap */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a 3D effect */
+    text-align: right; /* Align text inside the message */
+    align-self: flex-end; /* Ensure the user message aligns to the right */
+}
+
+
+
+
+.bot-message {
+    background-color: #f8d7da;
+    text-align: left;
+    margin-right: auto;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: #999;
+    margin: 5px 0;
+}
+
+.option-button {
+    display: block;
+    width: 70%;
+    padding: 12px;
+    margin: 5px; /* Center buttons */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fade-in 0.5s ease-in;
+    font-size: 1em;
+}
+
+.option-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+.option-button:active {
+    transform: translateY(1px);
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

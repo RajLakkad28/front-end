@@ -1,0 +1,355 @@
+/* Ensure the navbar takes full width */
+.navbar-custom {
+  width: 100%;
+  max-width: 100%;
+  background-color: #f8f9fa; /* Change to your preferred background color */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure body and root elements are full width */
+body, html, #root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero section styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 100px 15px; /* Adjusted padding for smaller screens */
+  height: 93vh; /* Full screen height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  animation: backgroundAnimation 25s infinite;
+}
+
+.hero-section .content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.rating img {
+  margin-right: 10px;
+}
+
+.rating span {
+  font-size: 1.2em;
+}
+
+/* Navbar toggler adjustments */
+.navbar-toggler {
+  border: none;
+}
+
+/* Ensure buttons and links are responsive */
+.btn-lg {
+  padding: 10px 20px;
+  font-size: 1.125rem;
+}
+
+.create-event-btn {
+  margin-left: 20px;
+}
+
+.nav-link-flag {
+  margin-left: 20px;
+}
+
+/* Hover effect for nav items */
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; /* Adjust as needed */
+}
+
+.navbar-nav .dropdown-menu {
+  display: none;
+}
+
+/* Keyframes for background animation */
+@keyframes backgroundAnimation {
+  0% {
+    background-image: url('../Image/event.jpg');
+  }
+
+  20% {
+    background-image: url('../Image/event1.jpg');
+  }
+
+  40% {
+    background-image: url('../Image/event2.jpg');
+  }
+
+  60% {
+    background-image: url('../Image/event3.jpg');
+  }
+
+  80% {
+    background-image: url('../Image/event4.jpg');
+  }
+
+  100% {
+    background-image: url('../Image/event5.jpg');
+  }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .hero-section {
+    background-size: cover;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .navbar-custom .navbar-nav {
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-section p {
+    font-size: 0.875rem;
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Search form adjustments for Navbar */
+.search-form .form-control {
+  border-radius: 20px;
+  box-shadow: none;
+}
+
+.search-form .btn-outline-success {
+  border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+  .search-form {
+    margin-top: 10px;
+  }
+}
+
+
+.chatbot-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff; /* Change to your preferred color */
+  color: white;
+  border-radius: 50%;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.chatbot-icon:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+.chatbot-icon i {
+  margin: 0; /* Center the icon */
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-button {
+  background-color: #f0f0f0; /* Light background */
+  border: none; /* Remove border */
+  border-radius: 25px; /* Rounded corners */
+  color: #333; /* Text color */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  margin: 0 5px; /* Spacing between buttons */
+  padding: 10px 15px; /* Padding */
+  transition: background-color 0.3s, transform 0.2s; /* Transition effects */
+}
+
+.pagination-button:hover {
+  background-color: #ff416c; /* Background color on hover */
+  color: #fff; /* Text color on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.pagination-button.active {
+  background-color: #ff416c; /* Active button background */
+  color: #fff; /* Active button text color */
+}
+/* Popup Scrollable Container */
+.popup-scroll {
+  max-height: 60vh; /* Maximum height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding-right: 10px; /* Space for scrollbar */
+  margin-top: 15px; /* Space above the scrollable area */
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease; /* Animation for popup appearance */
+}
+
+/* Popup Styling */
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6); /* Dark background with some transparency */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Popup Box */
+.popup {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3); /* Soft shadow */
+  width: 90%;
+  max-width: 550px;
+  position: relative;
+  z-index: 10000;
+}
+
+/* Popup Scroll for Overflowing Content */
+.popup-scroll {
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+/* Popup Title */
+.popup-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #333;
+}
+
+/* Popup Details */
+.popup-detail {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.popup-detail i {
+  font-size: 1.4rem; /* Slightly larger icon */
+  margin-right: 10px; /* Add space between icon and text */
+}
+
+.popup-detail strong {
+  margin-right: 5px; /* Space between 'Description:' and the text */
+}
+
+.popup-detail span {
+  display: inline;
+  flex-grow: 1; /* Allow the text to take up available space */
+}
+
+
+
+
+.close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ff416c;
+  transition: transform 0.2s ease, color 0.2s ease; /* Smooth hover transition */
+}
+
+.close-icon:hover {
+  transform: scale(1.2); /* Scale effect on hover */
+  color: #ff6f91; /* Slight color change on hover */
+}
+
+.close-icon:active {
+  transform: scale(0.9); /* Smaller scale effect when clicked */
+}
+
+
+/* Popup Image Styling */ 
+.popup-image {
+  width: 100%; /* Responsive image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Rounded corners for the image */
+  margin-top: 15px; /* Space above the image */
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
+}

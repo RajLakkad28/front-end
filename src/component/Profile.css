@@ -1,0 +1,30 @@
+.profile-page {
+    background-color: #f8f9fa; /* Light background color for the page */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the page */
+  }
+  
+  .profile-card {
+    background-color: #ffffff; /* White background for the profile card */
+    border-radius: 10px; /* Rounded corners */
+    margin-bottom: 20px; /* Space between cards */
+  }
+  
+  .profile-card h2 {
+    margin-bottom: 15px; /* Space below the name */
+  }
+  
+  .card-header {
+    background-color: #007bff; /* Blue background for the header */
+    color: white; /* White text color */
+    font-weight: bold; /* Bold text */
+  }
+  
+  .card-body p {
+    font-size: 16px; /* Font size for the details */
+  }
+  
+  .icon {
+    color: #007bff; /* Bootstrap primary color for icons */
+  }
+  

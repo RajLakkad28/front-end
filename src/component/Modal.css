@@ -1,0 +1,53 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    padding-top: 20px; /* Space from the top */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    max-width: 90%;
+    width: 500px; /* Adjust width as needed */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+    transform: translateY(-30px); /* Initial position above */
+    opacity: 0;
+    transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+.modal-content.show {
+    opacity: 1;
+    transform: translateY(0); /* Move to the final position */
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    background: #3498db; /* Blue background */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    width: 35px; /* Larger clickable area */
+    height: 35px; /* Match width */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.close-button:hover {
+    background: #2980b9; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly enlarge */
+}
